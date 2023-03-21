@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useMediaQuery } from 'react-responsive';
+import MediaQuery from 'react-responsive'
+// import { DesktopNav, TabletNav, MobileNav } from './components';
+import Style from './App.module.css';
+import {Routes,Route} from "react-router-dom"
+import Navigationbar from './Components/Navigationbar/Navigationbar';
+import Home from './Home';
+import About from './About';
+import Work from './Work';
+import Contact from './Contact';
+import Skill from './Skill';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={Style.App}>
+    <Navigationbar/>
+    <div className={Style.routeDiv}>
+     <Routes>
+
+     <Route path="/home" element={<Home/>}></Route>
+     <Route path="/" element={<Home/>}></Route>
+     <Route path="/about" element={<About/>}></Route>
+     <Route path="/work" element={<Work/>}></Route>
+     <Route path="/skill" element={<Skill/>}></Route>
+     <Route path="contact" element={<Contact/>}></Route>
+     
+     </Routes>
+     </div>
     </div>
   );
 }

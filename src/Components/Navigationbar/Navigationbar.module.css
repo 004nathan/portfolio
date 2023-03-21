@@ -1,0 +1,87 @@
+.navContainer{
+    height: 10vh;
+width:100vw;
+    color: white;
+    display: flex;
+    flex-direction: row;
+}
+.logodiv{
+    height: 10vh;
+width:70vw;
+display:flex;
+justify-content: flex-start;
+align-items: center;
+}
+.logodiv:hover{
+    cursor: pointer;
+}
+.home{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+.border{
+    width: 6vh;
+    border: 1px solid #fff;
+    margin-top:0.5vh;
+    visibility: visible;
+    display: inline-block;
+}
+.borderNone{
+    width: 6vh;
+    border: 1px solid #fff;
+    margin-top:0.5vh;
+    visibility: hidden;
+}
+.link {
+    display: inline-block;
+    color: #fffdfd;
+    text-decoration: none;
+  }
+  
+  .link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background:rgb(253, 253, 253);
+    transition: width .3s;
+  }
+  
+  .link:hover::after {
+    width: 100%;
+  }
+/* .border::after,.borderNone::after {
+    content: '';
+    visibility: visible;
+    width:0;
+    background:#000;
+    transition:.3s;
+} */
+
+.borderNone:hover{
+    width:6vh;
+    border: 1px solid #fff;
+    transition:1s;
+    visibility: visible;
+    margin-top:0.5vh;
+}
+.imgLogo{
+    height: 9.0vh;
+    margin-left: 2vw;
+}
+.NavigationName{
+height: 10vh;
+width:30vw;
+font-size: 2vh;
+letter-spacing: 0.06vw;
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+flex-direction: row;
+}
+.NavigationName a{
+    color: #fff;
+    text-decoration: none;
+}
